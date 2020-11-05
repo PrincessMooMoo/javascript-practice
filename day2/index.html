@@ -1,0 +1,33 @@
+<html lang="en">
+    <head><!--linking javascript: it matters where it is at in the code-->
+        <meta lang="utf-8">
+    </head>
+    <body>
+        <ul>
+            <li>
+                <a href="">Test1</a>
+            </li>
+            <li>
+                <a href="">Test2</a>
+            </li>
+        </ul>
+        <style>
+            ul li:nth-child(2) a {
+                color: green;
+            }
+        </style>
+        <button style= "position: absolute; right: 0" onclick="alert('inline')">Click</button>
+        <link rel="stylesheet" href="style.css">
+
+        <!-- <style> -->
+            <!-- button{ -->
+                <!-- font-size: xx-large; -->
+                <!-- background-color: orange; -->
+            }
+        <!-- </style> -->
+        <!-- <script> -->
+        <!-- //    document.querySelector('button').style.color = 'red';//all the properties in style are strings  -->
+        <!-- </script> -->
+        <script src ="script.js"></script>
+    </body>
+</html>
