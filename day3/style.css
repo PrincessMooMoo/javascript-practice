@@ -1,0 +1,22 @@
+input {
+    font-size: 40px;
+}
+
+#game-view div{
+    height: 100px;
+    width: 100px;
+    background-color: brown;
+    position: absolute;
+   
+}
+
+#super-clock{
+    display: flex;
+    gap: 4px;
+    margin: 0 auto;
+}
+
+#super-clock > div{
+    display: flex;
+    
+}
