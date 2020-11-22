@@ -6,7 +6,7 @@
 //     For every number that is divisible by only 5 and not 3, console log "Buzz"
 
 const body = document.body;
-body.innerHTML += `<ul>Here is your list of Fizz-Buzz`; 
+body.innerHTML += `<p>Here is your list of Fizz-Buzz</p>`; 
 function fizzBuzz(number) {
     number = parseInt(number);
     let convertNumber = "";
@@ -23,7 +23,7 @@ function fizzBuzz(number) {
         convertNumber = i;
     }
     // console.log(convertNumber);
-    body.innerHTML += `<li> ${convertNumber}</li>`;
+    body.innerHTML += `<ul><li> ${convertNumber}</li></ul>`;
 };
 return body.innerHtml += `</ul>`;
 };
