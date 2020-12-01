@@ -1,20 +1,17 @@
+
+//so with about 20 minutes left of class, I lost all concentration and focus
 const storeData = {
     items: [],
     name: 'GW Market',
     ui: {
         body: null,
         header: null,
-        itemList: null,
-    }
+        itemList: null,//he moved some of the data from other lines to these assignments
+    },
+    cart: [],
+    cartList: document.createElement('ul')
 };
-
-// const item = {
-//     price: 500,
-//     title: 'usb thumb drive',
-//     description: '16gb thumb drive',
-//     onSale: true
-// };
-
+storeData.ui.body.appendChild(storeData.cartList);
 storeData.items.push(
     createItem(
         500,
@@ -38,12 +35,21 @@ storeData.ui.header.innerText = storeData.name;
 storeData.ui.header.style.textAlign = 'center';
 
 storeData.ui.body.appendChild(storeData.ui.itemList);
+//you can change the style of the elements in either js or css
 
 function addStoreItemsToList(item) {
     const li = document.createElement('li');
     storeData.ui.itemList.appendChild(li);
     const ul = document.createElement('ul');
     li.appendChild(ul);
+    const imageLi = document.createElement('li');
+    ul.appendChild(imageLi);
+    imageLi.innerHTML = '<img src="source.unsplash"/>';//we can link an image here
+
+    imageLi.addEventListener('click', function() {
+        storeData.cart.push(item);
+        storeData.cart.innerHTML = cartListHtml;
+    })
 
     createDetail('Price', 'price');
     createDetail('Title', 'title');
@@ -72,7 +78,20 @@ storeData.items.forEach( function (item){
     addStoreItemsToList(item);
 })
 
-
+function cartListHtml() {
+    let html = '';
+    storeData.cart.forEach(function (item) {
+        html += `
+            <li>
+                <ul>
+                    <li>Title: ${item.title}</li>
+                    <li>Price: ${item.price}</li>
+                </ul>
+            <li>
+        `
+    });
+    return html;
+}
 
 
 
