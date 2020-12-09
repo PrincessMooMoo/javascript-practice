@@ -1,15 +1,7 @@
 <!DOCTYPE html>
     <head lang="en">
         <meta charset="UTF-8">
-        <title>Notes</title>
-        <style>
-            .valid {
-                border: green 4px solid;
-            }
-            .invalid {
-                border: red 4px dotted;
-            }
-        </style>
+        <title>Daily Challenge</title>
     </head>
     <body>
         <form class="invalid" onsubmit="onSubmit(event)" name="firstForm" action="">
@@ -17,8 +9,9 @@
             <input type="text" name="myName" >
             <input type="submit" text="submit">
         </form>
-        <img src="" alt="">
-
-        <script src='js/day9Notes.js'></script>
+        <div id="display">
+        </div>
+        <div id="checked"></div>
+        <script src='js/day9DailyChallege.js'></script>
     </body>
 </html>
