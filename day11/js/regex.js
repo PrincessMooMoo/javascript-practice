@@ -17,8 +17,13 @@
 //     alert ('non valid number');
 // }
 
-const string = 'my school is cool';
+// const string = 'my school is cool';
 
-console.log(string.replace(/my school/g, 'geekwise')); // will replace my school with geekwise
+// console.log(string.replace(/my school/g, 'geekwise')); // will replace my school with geekwise
 
-//most common used methods are match(), replace(), and split()
+// //most common used methods are match(), replace(), and split()
+
+function onSubmit(event) {
+    event.preventDefault();
+    console.log("This works");
+}
