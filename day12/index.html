@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+    <head lang="en">
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div id="answer-display">
+        </div>
+        <button id="myButton"> Get Random Answer</button>
+        <script>
+            (function (){
+
+            let score = 0;
+            const array = ['Yes', 'No', 'Maybe so'];            
+            const answerDisplay = document.querySelector('#answer-display');
+            const button = document.querySelector('#myButton');
+
+            button.addEventListener('click', whatToDoWhenIClickTheButton);
+
+            function getRandomNumber() {
+                const randomNumber = Math.random() * array.length;
+                const integer = Math.floor(randomNumber);
+                return integer;
+            }
+
+
+            function displayMyAnswer(answer) {
+                answerDisplay.innerHTML = answer;
+            }
+
+            function whatToDoWhenIClickTheButton() {
+                displayMyAnswer(array[getRandomNumber()]);
+            }
+        })();//end of the IIFE statement. It prevents you from accessing the information from the scope. Security
+
+
+        </script>
+    </body>
+</html>
